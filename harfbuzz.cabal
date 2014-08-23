@@ -1,0 +1,57 @@
+Name:                harfbuzz
+Version:             0.0.1.0
+Synopsis:            
+Description:         
+License:             MIT
+License-file:        LICENSE
+Author:              Marco Fruhwirth <fruhwirth.marco@gmail.com> 
+Maintainer:          Marco Fruhwirth <fruhwirth.marco@gmail.com> 
+Copyright:           Copyright Jason Dagit 2011
+Category:            Graphics
+Build-type:          Simple
+
+Cabal-version:       >=1.20
+
+Library
+  default-language: Haskell2010
+  default-extensions:
+    ForeignFunctionInterface
+  Build-tools: hsc2hs
+
+  Build-depends: base > 3, 
+                 freetype2 >= 2.5.3.0,
+                 bindings-DSL
+
+  -- Modules exported by the library.
+  Exposed-modules:                   
+                   Bindings.Harfbuzz.Hb
+                   Bindings.Harfbuzz.HbBlob
+                   Bindings.Harfbuzz.HbBuffer
+                   Bindings.Harfbuzz.HbCommon
+                   Bindings.Harfbuzz.HbFace
+                   Bindings.Harfbuzz.HbFont
+                   Bindings.Harfbuzz.HbFt
+                   Bindings.Harfbuzz.HbSet
+                   Bindings.Harfbuzz.HbShape
+                   Bindings.Harfbuzz.HbUnicode
+                   Bindings.Harfbuzz.HbVersion
+  -- Modules included in this library but not exported.
+  -- other-modules:       
+  
+  -- LANGUAGE extensions used by modules in this package.
+  -- other-extensions:    
+
+
+  -- Modules not exported by this package.
+  -- Other-modules:       
+
+  -- Extra tools (e.g. alex, hsc2hs, ...) needed to build the source.
+  Build-tools: hsc2hs
+  ghc-options: -Wall
+  pkgconfig-depends:
+        harfbuzz
+
+source-repository head
+  type: git
+  location: git://github.com/dagit/freetype2.git
+
