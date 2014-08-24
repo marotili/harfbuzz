@@ -19,8 +19,8 @@ import Bindings.Harfbuzz.HbFont
 #field codepoint , CUInt
 #field mask , CUInt
 #field cluster , CUInt
-#field var1 , <union _hb_var_int_t>
-#field var2 , <union _hb_var_int_t>
+#field var1 , CInt 
+#field var2 , CInt
 #stoptype
 -- #synonym_t hb_glyph_info_t , <struct hb_glyph_info_t>
 {- typedef struct hb_glyph_position_t {
@@ -35,7 +35,7 @@ import Bindings.Harfbuzz.HbFont
 #field y_advance , CInt
 #field x_offset , CInt
 #field y_offset , CInt
-#field var , <union _hb_var_int_t>
+#field var , CInt
 #stoptype
 -- #synonym_t hb_glyph_position_t , <struct hb_glyph_position_t>
 {- typedef struct hb_segment_properties_t {

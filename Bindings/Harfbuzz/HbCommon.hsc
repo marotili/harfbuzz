@@ -188,6 +188,7 @@ import Foreign.Ptr
 #integral_t hb_script_t
 #num HB_SCRIPT_COMMON
 #num HB_SCRIPT_INHERITED
+#num HB_SCRIPT_LATIN
 #num HB_SCRIPT_UNKNOWN
 #ccall hb_script_from_iso15924_tag , CUInt -> IO <hb_script_t>
 #ccall hb_script_from_string , CString -> CInt -> IO <hb_script_t>
